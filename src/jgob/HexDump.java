@@ -25,7 +25,7 @@ public class HexDump {
             if (offset < bytes.length) {
                 int b = bytes[offset++];
                 bBuff.append(String.format("%02X", b&0xFF));
-                if (Character.isAlphabetic(b))
+                if (Character.isLetterOrDigit(b) )
                     aBuff.append((char) b);
                 else
                     aBuff.append('.');
