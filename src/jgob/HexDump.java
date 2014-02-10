@@ -5,9 +5,12 @@ package jgob;
  */
 public class HexDump {
     public static final String dump(byte[] bytes) {
+        return dump(bytes,0);
+    }
+    public static final String dump(byte[] bytes, int start) {
         StringBuilder sb = new StringBuilder();
         StringBuilder ascii = new StringBuilder();
-        int offset = 0;
+        int offset = start;
         while (offset < bytes.length){
             sb.append(String.format("%04X ", offset));
             ascii.setLength(0);
